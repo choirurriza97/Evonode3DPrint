@@ -265,7 +265,7 @@ function getShipping(prefix){
    const isBekasi=city==='Kota Bekasi'||city==='Kabupaten Bekasi';
    return {method,city,address,fee:isBekasi?10000:0,valid:isBekasi&&!!address,note:isBekasi?'COD Bekasi: diantar langsung oleh penjual. Biaya antar awal Rp10.000.':'COD hanya tersedia untuk Kota/Kabupaten Bekasi. Pilih tujuan Bekasi.'};
  }
- return {method,city,address,fee,valid:!!city&&!!address,note:city?'Biaya pengiriman untuk paket 250 gram; tarif aktual dikonfirmasi sebelum dikirim.':'Pilih kota/kabupaten tujuan.'};
+ return {method,city,address,fee,valid:!!city&&!!address,note:city?'':'Pilih kota/kabupaten tujuan.'};
 }
 function updateShippingUI(prefix){
  const ship=getShipping(prefix);
